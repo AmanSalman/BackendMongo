@@ -14,10 +14,18 @@ const userSchema = new Schema({
         type:String,
         required:true
     },
+    cPassword:{
+        type:Boolean,
+    },
     gender:{
         type:String,
         enum:['female','male'],
         default:'female'
+    },
+    confirmEmail:{
+        type:Boolean,
+        required:true,
+        default:false
     }
 
 }, {
